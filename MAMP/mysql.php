@@ -5,6 +5,7 @@
  * Date: 11/05/2019
  * Time: 23:04
  */
+// adding  variables
 
 $servername = "localhost";
 $username = "username";
@@ -32,7 +33,7 @@ if(mysqli_select_db($connection,$db)){
     echo 'error has occurred when choosing db';
 }
 
-
+// closing connection
 
 mysqli_close($connection);
 
