@@ -7,12 +7,13 @@
  */
 
 $servername = "localhost";
-$username = "usernname";
+$username = "rkostix";
 $passwrod = "yourpass";
+$db = "phpStorm";
 
-// Create connection
+// Create connection and connect to DB
 
-$connection = new mysqli($servername,$username,$passwrod);
+$connection = new mysqli($servername,$username,$passwrod,$db);
 
 
 //check connection
@@ -22,3 +23,8 @@ if ($connection-> connect_error){
 }
 
 echo "Connected successfully";
+
+// close connection
+
+mysqli_close($connection);
+
