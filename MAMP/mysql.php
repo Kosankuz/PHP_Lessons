@@ -8,12 +8,12 @@
 
 $servername = "localhost";
 $username = "username";
-$passwrod = "yourpass";
+$passwrod = "pass";
 $db = "phpStorm";
 
-// Create connection and connect to DB
+// Create connection
 
-$connection = new mysqli($servername,$username,$passwrod,$db);
+$connection = new mysqli($servername,$username,$passwrod);
 
 
 //check connection
@@ -24,6 +24,15 @@ if ($connection-> connect_error){
 
 echo "Connected successfully";
 
-// close connection
+// choosing database
+
+if(mysqli_select_db($connection,$db)){
+ echo 'db is chosen';
+} else{
+    echo 'error has occurred when choosing db';
+}
+
+
+
 mysqli_close($connection);
 
