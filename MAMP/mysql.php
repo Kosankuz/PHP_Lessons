@@ -7,7 +7,7 @@
  */
 
 $servername = "localhost";
-$username = "rkostix";
+$username = "username";
 $passwrod = "yourpass";
 $db = "phpStorm";
 
@@ -25,6 +25,5 @@ if ($connection-> connect_error){
 echo "Connected successfully";
 
 // close connection
-
 mysqli_close($connection);
 
