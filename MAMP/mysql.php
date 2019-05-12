@@ -12,7 +12,7 @@ $username = "username";
 $passwrod = "pass";
 $db = "phpStorm";
 
-// Create connection
+// Create connection with database
 
 $connection = new mysqli($servername,$username,$passwrod);
 
