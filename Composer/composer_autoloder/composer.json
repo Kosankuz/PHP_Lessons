@@ -3,5 +3,8 @@
   "psr-4":{
     "Acme\\": "src"
   }
-}
+},
+  "require": {
+    "nesbot/carbon": "^2.17"
+  }
 }

@@ -3,9 +3,9 @@
  * Created by PhpStorm.
  * User: konstantinkuzmenko
  * Date: 11/05/2019
- * Time: 15:57
+ * Time: 16:46
  */
 
-require "vendor/autoload.php";
+use Carbon\Carbon;
 
-require "fight.php";
+printf("NOW: %s  ", Carbon::now());

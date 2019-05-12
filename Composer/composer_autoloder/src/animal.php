@@ -10,6 +10,6 @@ namespace Acme;
 
 class Animal {
     public function roar() {
-        return "Roar made some happiness";
+        return "Roar made some happiness ' \n '";
     }
 }
