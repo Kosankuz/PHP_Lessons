@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Created by PhpStorm.
@@ -6,4 +8,6 @@
  * Time: 23:25
  */
 
-echo '<p>data from PHP file</p>';
+echo '<div class="phpContent"><p class="phpContentText">PHP CONTENT FEEEDED FROM PHP FILE</p></div>';
+
+
