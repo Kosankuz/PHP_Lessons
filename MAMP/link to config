@@ -25,3 +25,11 @@ AllowOverride None -> into -> AllowOverride All
 
 https://www.whoishostingthis.com/resources/htaccess/
 
+
+
+-------------------
+
+.htaccess redirect
+
+Redirect 301  /index  /folder/test1.php
+
