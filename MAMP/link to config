@@ -1,3 +1,9 @@
+#Activate .htaccess
+
+
+--------------------
+
+
 cd /Applications/MAMP/conf/apache/
 
 nano httpd.conf
@@ -13,3 +19,9 @@ In MAMP/conf/apache/httpd.conf
 And change:
 
 AllowOverride None -> into -> AllowOverride All
+
+
+-------------------
+
+https://www.whoishostingthis.com/resources/htaccess/
+
