@@ -1,0 +1,79 @@
+First generate certifcate 
+
+mkdir /Appclition/MAMP/conf/apache/ssl
+
+cd /Appclition/MAMP/conf/apache/ssl
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mysitename.key -out mysitename.crt
+
+
+now config Apache
+
+
+cd /Appclition/MAMP/conf/apache/
+
+nano httpd.conf
+
+
+Configuring httpd.conf
+
+First open the httpd.conf file and uncomment the following lines:
+
+LoadModule ssl_module modules/mod_ssl.so
+
+Include /Applications/MAMP/conf/apache/extra/httpd-ssl.conf
+
+Next set the Servername to localhost:443 (make sure there is only one Servername defined in the file)
+
+Servername  localhost:443
+
+
+Configuring httpd-ssl.conf
+
+Then in the httpd-ssl.conf file do the following:
+
+Set Listen to 443
+
+Listen 443
+
+Note: From MAMP 4.4.1 onwards, adding this might not be necessary. If Apache fails to start with the ‘could not bind to address [::]:443′ error, you might have to comment out the ‘Listen 443’ line by placing # in front of it.
+
+Next find the virtualhost configuration which looks something like this:
+
+<VirtualHost _default_:443>
+
+# General setup for the virtual host
+DocumentRoot “/Applications/MAMP/Library/htdocs”
+ServerName localhost:443
+ServerAdmin you@example.com
+ErrorLog “/Applications/MAMP/Library/logs/error_log”
+TransferLog “/Applications/MAMP/Library/logs/access_log”
+
+# SSL Engine Switch:
+# Enable/Disable SSL for this virtual host.
+SSLEngine off
+
+A couple of things need to be changed in this configuration. First, the VirtualHost should be set to *:443, instead of _default_:443. Make sure the DocumentRoot is correct. The ServerName should be changed to localhost:443. Finally, the SSLEngine needs to be set to on. The result should look like this:
+
+<VirtualHost *:443>
+
+# General setup for the virtual host
+DocumentRoot “/Applications/MAMP/htdocs”
+ServerName localhost
+ServerAdmin you@example.com
+ErrorLog “/Applications/MAMP/Library/logs/error_log”
+TransferLog “/Applications/MAMP/Library/logs/access_log”
+
+# SSL Engine Switch:
+# Enable/Disable SSL for this virtual host.
+SSLEngine on
+
+Finally specify the SSLCertificateFile and SSLCertificateKeyFile directives. Add the location of the .crt file you have generated earlier after SSLCertificateFile.
+
+Add the location of the .key file to the SSLCertificateKeyFile directive.
+
+In my case, it looks like this:
+
+SSLCertificateFile “/Appclition/MAMP/conf/apache/ssl/mysitename.crt”
+
+SSLCertificateKeyFile “/Appclition/MAMP/conf/apache/ssl/mysitename.key”
