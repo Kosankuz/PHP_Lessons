@@ -1,0 +1,35 @@
+#Activate .htaccess
+
+
+--------------------
+
+
+cd /Applications/MAMP/conf/apache/
+
+nano httpd.conf
+
+Find
+
+<Directory />
+    Options Indexes FollowSymLinks
+    AllowOverride None
+</Directory>
+In MAMP/conf/apache/httpd.conf
+
+And change:
+
+AllowOverride None -> into -> AllowOverride All
+
+
+-------------------
+
+https://www.whoishostingthis.com/resources/htaccess/
+
+
+
+-------------------
+
+.htaccess redirect
+
+Redirect 301  /index  /folder/test1.php
+

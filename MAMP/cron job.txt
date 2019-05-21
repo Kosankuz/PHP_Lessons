@@ -1,0 +1,22 @@
+
+
+#in terminal do the following:
+
+
+export EDITOR=nano
+export VISUAL="$EDITOR"
+
+
+crontab -e 
+
+# now edit cron file 
+
+1 * * * * php /path/to/your/file/cron_handler.php
+
+
+# save file 
+
+
+#now run in terminal 
+
+crontab -l
