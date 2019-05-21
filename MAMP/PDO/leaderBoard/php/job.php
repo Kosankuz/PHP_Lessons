@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="../master.css">
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

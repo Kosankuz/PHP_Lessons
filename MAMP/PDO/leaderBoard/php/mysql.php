@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by PhpStorm.
@@ -19,26 +20,28 @@ try {
     $connection = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
     // set the PDO error mode to exception
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
+   // echo "Connected successfully";
+
+    $sql = 'SELECT * FROM office ';
+    $q = $connection->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+    while($r = $q->fetch()){
+
+        echo '<p>'  ;
+        echo 'First name : ' . htmlspecialchars($r["name"]);
+        echo '</p>' ;
+
+        echo htmlspecialchars($r['lastname']);
+
+    }
 }
 catch (PDOException $e){
     echo "connection failed: " . $e->getMessage();
 }
 
+
+
 $conn = null;
 
-
-$handle = curl_init();
-
-$url = "https://www.delfi.lv/";
-
-// Set the url
-curl_setopt($handle, CURLOPT_URL, $url);
-// Set the result output to be a string.
-curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
-
-$output = curl_exec($handle);
-
-curl_close($handle);
 
 echo $output;

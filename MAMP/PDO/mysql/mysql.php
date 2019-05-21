@@ -8,8 +8,8 @@
 // adding  variables
 
 $servername = "localhost";
-$username = "kostix";
-$password = "kostix@kostix";
+$username = "username";
+$password = "password";
 $db = "phpStorm";
 
 // Create connection with database
