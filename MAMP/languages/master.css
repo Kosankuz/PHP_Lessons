@@ -1,0 +1,25 @@
+.mainTable{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+
+.firstTable{
+    background-color:#87ceeb85;
+    border-radius:10px;
+
+    width:50px;
+    text-align:center;
+    padding:10px;
+    border:1px solid black;
+}
+
+.secondTable{
+    background-color:#87ceeb85;
+    border-radius:10px;
+
+    width:50px;
+    text-align:center;
+    padding:10px;
+    border:1px solid black;
+}
