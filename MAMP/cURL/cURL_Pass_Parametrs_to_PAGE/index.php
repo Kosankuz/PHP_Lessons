@@ -10,7 +10,7 @@
 
 try {
     $data=array("a"=>"6","b"=>"3");
-    $url = "http://example.com/testCURL.php";
+    $url = "http://example.com/testCURL.php/";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,$url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
@@ -22,5 +22,8 @@ try {
 
 }
 catch(PDOException $e) {
+
     echo "Error: " . $e->getMessage();
+
+
 }
