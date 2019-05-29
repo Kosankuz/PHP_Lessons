@@ -2,6 +2,10 @@ $(document).ready(function() {
 
  timer();
 
+    $("#jqueryOutput").on('DOMSubtreeModified', function () {
+        $('#checker').text($('#jqueryOutput').text());
+    });
+
 });
 
 
@@ -11,11 +15,13 @@ function timer() {
         var date = new Date();
         var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         $('#jqueryOutput').text(time);
-        checker();
+        //checker();
     },1000)
 }
 
 
+
+/*
 function checker() {
     var currentValue = $('#jqueryOutput').text();
     var newValue;
@@ -33,4 +39,4 @@ function checker() {
     },1000);
 
 
-}
+}*/
