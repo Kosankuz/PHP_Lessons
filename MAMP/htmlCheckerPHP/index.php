@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="window">
+
+        <span class="test"> </span>
+
+        <div>Javascript Output
+            <span class="output">SPAN</span>
+        </div>
+       <div>
+           Jquery Checker
+           <span class="checker">checker</span>
+       </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="js/master.js"></script>
+</body>
+</html>
