@@ -1,0 +1,11 @@
+.modal{
+    position:absolute;
+    width:100%;
+
+    left:0%;
+    top:30%;
+    background-color:#ccc5c5;
+    padding:30px;
+    text-align:center;
+}
+
