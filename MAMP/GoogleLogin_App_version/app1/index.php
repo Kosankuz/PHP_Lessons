@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4" align="center">
-            <img src="img/2.jpg" alt="" width="100px" height="100px">
+            <img src="../img/1.png" alt="" width="100px" height="100px">
 
     </div>
         <div class="col-md-4" align="center">
@@ -33,7 +33,7 @@
 </table>
 
     <div>
-        <a href="logout.php">Log Out</a>
+        <a href="../logout.php">Log Out</a>
     </div>
 
 

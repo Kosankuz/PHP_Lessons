@@ -27,5 +27,5 @@ $_SESSION['familyName'] = $userData['familyName'];
 $_SESSION['givenName'] = $userData['givenName'];
 
 
-header('Location: index.php');
+header('Location: app/index.php');
 exit();
