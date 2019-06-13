@@ -1,13 +1,8 @@
 <?php
-
-require_once "config.php";
-
-
-$loginURL = $gClient -> createAuthUrl();
-$loginURL2 = $gClient2 -> createAuthUrl();
-$loginURL3 = $gClient3 -> createAuthUrl();
-$loginURL4 = $gClient4 -> createAuthUrl();
-
+ session_start();
+ if (!isset($_SESSION['access_token'])){
+     header('Location: login.php');
+ }
 ?>
 
 <!doctype html>
@@ -16,28 +11,49 @@ $loginURL4 = $gClient4 -> createAuthUrl();
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="css/master.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Google API</title>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="../logout.php">Log Out</a>
+
+        </li>
+
+    </ul>
+</nav>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-offset-3" align="center">
-
-            <img src="" alt="">
-
-            <form>
-                <img src="img/1.png" width="100px" height="100px" onclick="window.location= '<?php echo $loginURL  ?>'" class="btn btn-danger">
-                <img src="img/2.jpg" width="100px" height="100px" onclick="window.location= '<?php echo $loginURL2 ?>'" class="btn btn-danger">
-                <img src="img/3.png" width="100px" height="100px" onclick="window.location= '<?php echo $loginURL3 ?>'" class="btn btn-danger">
-                <div src="" width="100px" height="100px" onclick="window.location= '<?php echo $loginURL4 ?>'" class="btn btn-danger">ADMIN</div>
-            </form>
-        </div>
+        <div class="col-md-4" align="center">
+            <div class="row">
+                <div class="col-md-8">
+                    <label class="container">Application 1
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Application 2
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Application 3
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
     </div>
+
+    </div>
+
 </div>
+
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

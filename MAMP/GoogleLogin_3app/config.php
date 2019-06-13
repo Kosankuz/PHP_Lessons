@@ -25,5 +25,12 @@ $gClient3 -> setApplicationName("CPI Login Tutorials");
 $gClient3 -> setRedirectUri("http://localhost/GoogleLogin/g-callback3.php");
 $gClient3 -> addScope("https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email ");
 
+$gClient4 = new Google_Client();
+$gClient4 -> setClientId($ClientId);
+$gClient4 -> setClientSecret($ClientSecret);
+$gClient4 -> setApplicationName("CPI Login Tutorials");
+$gClient4 -> setRedirectUri("http://localhost/GoogleLogin/g-callback_admin.php");
+$gClient4 -> addScope("https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email ");
+
 
 ?>
