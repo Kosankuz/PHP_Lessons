@@ -1,0 +1,80 @@
+.wrap{
+    width:400px;
+    height:300px;
+    margin:0 auto;
+    border:1px solid #8c1515;
+    display:flex;
+    justify-content:space-between;
+}
+
+.longDivs{
+    margin:0 auto;
+    width:300px;
+    margin:0px 5px;
+
+}
+.topDiv{
+    width:auto;
+    border:1px solid #110ec7;
+    padding:10px;
+    text-align:right;
+    margin: 150px 0px 40px 0 ;
+    float:right;
+}
+
+.bottomDiv{
+    width:auto;
+    height:auto;
+    border:1px solid black;
+    padding:10px;
+    text-align:right;
+    margin: 0px 0px 0 0 ;
+    float:right;
+    clear:both;
+}
+
+
+.squares{
+    width:90px;
+
+    padding:0 20px;
+
+}
+.topSquare{
+    padding:10px;
+    text-align:right;
+    margin: 150px 0px 40px 0 ;
+    width:100%;
+    height:46px;
+    border:1px solid #1ca9b7;
+}
+.bottomSquare{
+    border:1px solid black;
+    padding:10px;
+    text-align:right;
+
+    width:100%;
+    height:46px;
+    border:1px solid #1ca9b7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
