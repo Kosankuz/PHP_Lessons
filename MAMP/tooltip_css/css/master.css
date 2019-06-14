@@ -1,0 +1,97 @@
+a.tip {
+    position: relative;
+}
+
+a.tip span {
+    white-space:nowrap;
+    display: none;
+    position: absolute;
+    width: fit-content;
+    padding: 5px;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+    -moz-border-radius: 5px; /* this works only in camino/firefox */
+    -webkit-border-radius: 5px; /* this is just for Safari */
+}
+.tip span:before{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+}
+
+a:hover.tip {
+    font-size: 99%; /* this is just for IE */
+}
+
+a:hover.tip span {
+    display: block;
+}
+
+
+.left span{
+    top: -5px;
+    left: -100px;
+}
+
+a.left span:after{
+    content:'';
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left:8px solid black;
+    left:72px;
+    top:7px;
+    position:absolute;
+
+}
+
+.right span{
+    top: -5px;
+    right: -100px;
+}
+
+.right span:before{
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right:8px solid black;
+    left:-8px;
+    top:7px;
+}
+
+.top span{
+
+    top: -40px;
+    right: -27px;
+
+
+}
+
+.top span:after{
+    content:'';
+    border-right: 8px solid transparent;
+    border-top: 8px solid black;
+    border-bottom: 8px solid transparent;
+    border-left:8px solid transparent;
+    left:28px;
+    top:27px;
+    position:absolute;
+}
+
+.bottom span{
+
+    top: 40px;
+    right: -13px;
+}
+
+.bottom span:before{
+    content:'';
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid black;
+    border-left:8px solid transparent;
+    left:28px;
+    top:-16px;
+    position:absolute;
+}
